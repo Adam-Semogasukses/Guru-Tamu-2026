@@ -1,18 +1,853 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio Muhammad Adam Al Fatih — Siswa RPL SMK Telkom Lampung & Senior Web Developer. Arsitektur web modern dengan gaya visual racing Carlos Sainz F1.">
+  <meta name="author" content="Muhammad Adam Al Fatih">
+  <title>Muhammad Adam Al Fatih | Portfolio Resmi — Siswa RPL SMK Telkom Lampung</title>
+
+  <!-- Google Fonts: Outfit (Display Headings), Inter (Body Text), JetBrains Mono (Telemetry & Code) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Halo dunia</h1>
-    <h2>tes tes</h2>
-    <!-- button -->
-    <div>
-        <button onclick="console.log('Tombol berhasil diklik!')">Klik Saya</button>
+
+  <!-- ========================================================================
+       1. FIXED HEADER & FLOATING CAPSULE NAVIGATION PILL
+       ======================================================================== -->
+  <header class="header">
+    <div class="header-container">
+      <!-- Monogram / Brand Logo -->
+      <a href="#hero" class="logo" aria-label="Beranda Muhammad Adam Al Fatih">
+        <span>ADAM AL FATIH</span>
+        <span class="logo-badge">RPL // 55</span>
+      </a>
+
+      <!-- Floating Capsule / Nav Pill (Carlos Sainz Signature Aesthetic) -->
+      <div class="nav-pill-wrapper">
+        <nav class="nav-pill" aria-label="Navigasi Utama">
+          <a href="#hero" class="nav-link active">Home</a>
+          <a href="#story" class="nav-link">Blueprint</a>
+          <a href="#telemetry" class="nav-link">Telemetri</a>
+          <a href="#projects" class="nav-link">Proyek RPL</a>
+          <a href="#stack" class="nav-link">Engine Room</a>
+          <a href="#contact" class="nav-link">Pit Stop</a>
+        </nav>
+      </div>
+
+      <!-- Action Button & Mobile Hamburger -->
+      <div class="header-actions">
+        <a href="#contact" class="btn-pitstop">
+          <span class="dot"></span>
+          <span>Pit Stop // Kontak</span>
+        </a>
+
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Buka Menu Navigasi" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <a href="#hero" class="nav-link">01 // Home & Overview</a>
+    <a href="#story" class="nav-link">02 // Blueprint Identitas</a>
+    <a href="#telemetry" class="nav-link">03 // Telemetri & Statistik</a>
+    <a href="#projects" class="nav-link">04 // Proyek Unggulan RPL</a>
+    <a href="#stack" class="nav-link">05 // Engine Room & Skill</a>
+    <a href="#contact" class="nav-link">06 // Pit Stop & Kontak</a>
+  </div>
+
+  <main>
+    <!-- ======================================================================
+         2. HERO SECTION (EDITORIAL F1 SPEEDWAY & DRIVER SHOWCASE)
+         ====================================================================== -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-main-grid">
+          <!-- Text Content -->
+          <div class="hero-content">
+            <div class="hero-meta-badge">
+              <span class="mono-tag">01 // OFFICIAL SPEEDWAY & CODE PORTFOLIO</span>
+            </div>
+
+            <h1 class="hero-headline">
+              MUHAMMAD ADAM
+              <span class="surname">AL FATIH</span>
+            </h1>
+
+            <p class="hero-tagline">
+              Siswa <strong>Rekayasa Perangkat Lunak (RPL)</strong> di <strong>SMK Telkom Lampung</strong> & <strong>Senior Web Developer</strong>. Berdedikasi membangun aplikasi web modern, performa berkecepatan tinggi, dan arsitektur kode bersih berstandar industri perangkat lunak.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn-primary">
+                <span>Lihat Proyek RPL</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+
+              <a href="#story" class="btn-secondary">
+                <span>The Blueprint</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual: Avatar Frame with Telemetry Overlay -->
+          <div class="hero-visual-wrapper">
+            <div class="hero-image-frame">
+              <img src="assets/ppp.png" alt="Foto Profil Muhammad Adam Al Fatih - SMK Telkom Lampung" onerror="this.onerror=null; this.src='assets/pp.jpg';">
+              <div class="hero-image-overlay"></div>
+
+              <!-- Racing Crosshairs -->
+              <span class="hero-crosshair top-left">+ 055.RPL</span>
+              <span class="hero-crosshair top-right">SYS.OK //</span>
+              <span class="hero-crosshair bottom-left">TELKOM-LPG</span>
+              <span class="hero-crosshair bottom-right">LAT 5.42° S</span>
+
+              <!-- Floating Status Pill on Avatar -->
+              <div class="hero-floating-pill">
+                <div class="floating-pill-left">
+                  <span>DRIVER / DEVELOPER</span>
+                  <span>M. ADAM AL FATIH</span>
+                </div>
+                <div class="floating-pill-badge">
+                  RPL ACTIVE
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Telemetry Bottom Bar (Carlos Sainz Status Cards Replica) -->
+        <div class="hero-telemetry-bar fade-in-section">
+          <div class="telemetry-grid">
+            <div class="telemetry-item">
+              <span class="telemetry-label">
+                <span class="status-dot"></span>
+                Status Saat Ini
+              </span>
+              <span class="telemetry-value">SMK Telkom Lampung</span>
+            </div>
+
+            <div class="telemetry-item">
+              <span class="telemetry-label">Konsentrasi & Role</span>
+              <span class="telemetry-value">Senior Web Developer</span>
+            </div>
+
+            <div class="telemetry-item">
+              <span class="telemetry-label">Core Specialty</span>
+              <span class="telemetry-value">Fullstack & UI Architecture</span>
+            </div>
+
+            <div class="telemetry-item">
+              <span class="telemetry-label">Next Grand Prix / Target</span>
+              <span class="telemetry-value">Magang Industri & LKS RPL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. BLUEPRINT & DRIVER STORY (IDENTITY & PHILOSOPHY)
+         ====================================================================== -->
+    <section class="section" id="story">
+      <div class="container">
+        <div class="section-head fade-in-section">
+          <span class="mono-tag">02 // THE BLUEPRINT</span>
+          <h2 class="section-title">
+            FILOSOFI & IDENTITAS <span class="number">[SPEC-01]</span>
+          </h2>
+          <p class="section-subtitle">
+            Kombinasi disiplin presisi ala Formula 1 dengan dedikasi rekayasa perangkat lunak di SMK Telkom Lampung.
+          </p>
+        </div>
+
+        <div class="blueprint-grid">
+          <!-- Story Narrative -->
+          <div class="blueprint-story-text fade-in-section">
+            <p>
+              Halo, saya <strong>Muhammad Adam Al Fatih</strong>. Sebagai siswa di <strong>SMK Telkom Lampung</strong> jurusan <strong>Rekayasa Perangkat Lunak (RPL)</strong>, saya melihat dunia pemrograman layaknya lintasan balap Formula 1 — di mana kecepatan eksekusi, efisiensi arsitektur kode, dan reliabilitas sistem menjadi penentu utama kemenangan.
+            </p>
+
+            <blockquote class="blueprint-highlight-quote">
+              "Setiap baris kode bukan sekadar sintaks, melainkan mesin presisi tinggi yang harus mampu beroperasi optimal di bawah tekanan beban nyata."
+            </blockquote>
+
+            <p>
+              Di lingkungan SMK Telkom Lampung yang kompetitif dan berorientasi teknologi modern, saya mengasah kemampuan mulai dari perancangan basis data relasional MySQL, logika backend PHP dan Node.js, hingga perancangan antarmuka pengguna interaktif dengan Vanilla HTML5, modern CSS3, dan JavaScript ES6 murni.
+            </p>
+
+            <p>
+              Fokus saya saat ini adalah mengembangkan sistem berbasis web yang menyelesaikan permasalahan nyata di sekolah dan masyarakat, seperti sistem absensi terintegrasi, perpustakaan digital, serta manajemen ujian kejuruan.
+            </p>
+          </div>
+
+          <!-- Technical Driver Spec Sheet -->
+          <div class="spec-sheet-card fade-in-section">
+            <div class="spec-sheet-header">
+              <h4>// TECHNICAL SPECIFICATION SHEET</h4>
+              <span class="mono-tag">ACTIVE STATUS</span>
+            </div>
+
+            <div class="spec-row">
+              <span class="spec-key">Nama Lengkap</span>
+              <span class="spec-val">Muhammad Adam Al Fatih</span>
+            </div>
+
+            <div class="spec-row">
+              <span class="spec-key">Institusi</span>
+              <span class="spec-val highlight">SMK Telkom Lampung</span>
+            </div>
+
+            <div class="spec-row">
+              <span class="spec-key">Kompetensi Keahlian</span>
+              <span class="spec-val">Rekayasa Perangkat Lunak (RPL)</span>
+            </div>
+
+            <div class="spec-row">
+              <span class="spec-key">Role & Tingkat</span>
+              <span class="spec-val">Siswa RPL / Senior Web Developer</span>
+            </div>
+
+            <div class="spec-row">
+              <span class="spec-key">Domisili / Markas</span>
+              <span class="spec-val">Lampung, Indonesia</span>
+            </div>
+
+            <div class="spec-row">
+              <span class="spec-key">Dev Environment</span>
+              <span class="spec-val">VS Code, Laragon Local Server, Git</span>
+            </div>
+
+            <div class="spec-row">
+              <span class="spec-key">Bahasa Pemrograman</span>
+              <span class="spec-val">JavaScript, PHP, HTML5, CSS3, SQL</span>
+            </div>
+
+            <div class="spec-row">
+              <span class="spec-key">Target Karir</span>
+              <span class="spec-val highlight">Software Engineer / Web Architect</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. STATS & TELEMETRY BANNER (ANIMATED COUNTERS)
+         ====================================================================== -->
+    <section class="stats-banner" id="telemetry">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="15">0</span>
+              <span class="stat-suffix">+</span>
+            </div>
+            <span class="stat-label">// PROYEK WEB RPL</span>
+            <span class="stat-desc">Sistem sekolah, aplikasi mandiri, & studi kasus</span>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="100">0</span>
+              <span class="stat-suffix">%</span>
+            </div>
+            <span class="stat-label">// KOMITMEN KODE BERSIH</span>
+            <span class="stat-desc">Struktur modular, semantik, & terdokumentasi</span>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="3">0</span>
+              <span class="stat-suffix">+</span>
+            </div>
+            <span class="stat-label">// TAHUN EKSPLORASI CODING</span>
+            <span class="stat-desc">Pengalaman intensif praktik kejuruan RPL</span>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-target="55">0</span>
+              <span class="stat-suffix">#</span>
+            </div>
+            <span class="stat-label">// RACING NUMBER & SPIRIT</span>
+            <span class="stat-desc">Terinspirasi mental pantang menyerah Carlos Sainz</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. SHOWCASE PROJECTS (THE GRAND PRIX OF CODE)
+         ====================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head fade-in-section">
+          <span class="mono-tag">03 // THE GRAND PRIX</span>
+          <h2 class="section-title">
+            PROYEK UNGGULAN RPL <span class="number">[TRACK-RECORD]</span>
+          </h2>
+          <p class="section-subtitle">
+            Karya dan sistem aplikasi berbasis web yang dikembangkan selama menempuh pendidikan di SMK Telkom Lampung.
+          </p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="projects-filter-bar fade-in-section">
+          <button type="button" class="filter-btn active" data-filter="all">Semua Proyek (4)</button>
+          <button type="button" class="filter-btn" data-filter="school">Sistem Sekolah (2)</button>
+          <button type="button" class="filter-btn" data-filter="fullstack">Fullstack Web (1)</button>
+          <button type="button" class="filter-btn" data-filter="exam">Uji Kompetensi (1)</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <!-- Project 1: Telkom Smart Attendance -->
+          <article class="project-card fade-in-section" data-category="school">
+            <div class="project-thumb">
+              <img src="assets/project-1.jpg" alt="Telkom Smart Attendance Preview">
+              <span class="project-tag-pill">Sistem Sekolah</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span>PROYEK UNGGULAN 2024</span>
+                <span>PHP • MYSQL • QR SCANNER</span>
+              </div>
+
+              <h3 class="project-title">Telkom Smart Attendance (Presensi QR Code & Geofencing)</h3>
+              <p class="project-desc">
+                Sistem presensi siswa real-time berbasis QR Code dinamis dan geofencing GPS lingkungan SMK Telkom Lampung untuk efisiensi dan transparansi rekap kehadiran.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-chip">PHP / Laravel</span>
+                <span class="tech-chip">MySQL</span>
+                <span class="tech-chip">JavaScript ES6</span>
+                <span class="tech-chip">QR API</span>
+                <span class="tech-chip">Leaflet Maps</span>
+              </div>
+
+              <div class="project-footer-actions">
+                <a href="https://github.com/adam-alfatih" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Lihat di GitHub</span>
+                </a>
+
+                <button type="button" class="btn-detail-trigger" data-project="telkom-attendance">
+                  Detail Arsitektur ➔
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: DigiLib SMK Telkom Lampung -->
+          <article class="project-card fade-in-section" data-category="school">
+            <div class="project-thumb">
+              <div class="project-vector-mockup">
+                <div class="mockup-header-bar">
+                  <div class="mockup-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="mockup-tag">// DIGILIB-TELKOM.INTERNAL</span>
+                </div>
+                <div class="mockup-body-preview">
+                  <div class="mockup-line w-80"></div>
+                  <div class="mockup-line w-60"></div>
+                  <div class="mockup-badge-box">
+                    <span>📚 KATALOG BUKU ELEKTRONIK & SIRKULASI</span>
+                  </div>
+                  <div class="mockup-line w-40"></div>
+                </div>
+              </div>
+              <span class="project-tag-pill">Sistem Sekolah</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span>MANAJEMEN PERPUSTAKAAN</span>
+                <span>JS • PHP • BARCODE</span>
+              </div>
+
+              <h3 class="project-title">DigiLib SMK Telkom Lampung (Perpustakaan Digital)</h3>
+              <p class="project-desc">
+                Portal otomasi peminjaman buku, katalog daring interaktif, pencatatan barcode fisik, dan sistem denda keterlambatan buku untuk perpustakaan sekolah.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-chip">JavaScript ES6</span>
+                <span class="tech-chip">PHP Native OOP</span>
+                <span class="tech-chip">MySQL</span>
+                <span class="tech-chip">Barcode JS</span>
+                <span class="tech-chip">CSS3 Grid</span>
+              </div>
+
+              <div class="project-footer-actions">
+                <a href="https://github.com/adam-alfatih" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Lihat di GitHub</span>
+                </a>
+
+                <button type="button" class="btn-detail-trigger" data-project="digilib-telkom">
+                  Detail Arsitektur ➔
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: RPL TaskHub & LMS -->
+          <article class="project-card fade-in-section" data-category="fullstack">
+            <div class="project-thumb">
+              <div class="project-vector-mockup">
+                <div class="mockup-header-bar">
+                  <div class="mockup-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="mockup-tag">// RPL-TASKHUB.DEV</span>
+                </div>
+                <div class="mockup-body-preview">
+                  <div class="mockup-line w-60"></div>
+                  <div class="mockup-badge-box">
+                    <span>⚡ CODE REVIEW & SUBMISSION LMS</span>
+                  </div>
+                  <div class="mockup-line w-80"></div>
+                </div>
+              </div>
+              <span class="project-tag-pill">Fullstack</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span>E-LEARNING RPL</span>
+                <span>NODE.JS • PRISMA • GLASS</span>
+              </div>
+
+              <h3 class="project-title">RPL TaskHub & LMS (Learning Management System)</h3>
+              <p class="project-desc">
+                Portal pembelajaran dan pengumpulan tugas pemrograman terintegrasi repositori GitHub, dilengkapi viewer kode dan papan peringkat keaktifan siswa.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">Express</span>
+                <span class="tech-chip">JavaScript ES6</span>
+                <span class="tech-chip">Prisma ORM</span>
+                <span class="tech-chip">Glassmorphism</span>
+              </div>
+
+              <div class="project-footer-actions">
+                <a href="https://github.com/adam-alfatih" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Lihat di GitHub</span>
+                </a>
+
+                <button type="button" class="btn-detail-trigger" data-project="lms-taskhub">
+                  Detail Arsitektur ➔
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: SI-UKK RPL -->
+          <article class="project-card fade-in-section" data-category="exam">
+            <div class="project-thumb">
+              <div class="project-vector-mockup">
+                <div class="mockup-header-bar">
+                  <div class="mockup-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <span class="mockup-tag">// UKK-STANDAR.BNSP</span>
+                </div>
+                <div class="mockup-body-preview">
+                  <div class="mockup-line w-80"></div>
+                  <div class="mockup-badge-box">
+                    <span>🏆 RUBRIK PENILAIAN OTOMATIS UKK</span>
+                  </div>
+                  <div class="mockup-line w-40"></div>
+                </div>
+              </div>
+              <span class="project-tag-pill">Uji Kompetensi</span>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta-top">
+                <span>STANDARISASI BNSP</span>
+                <span>PHP MVC • CHART • PDF</span>
+              </div>
+
+              <h3 class="project-title">SI-UKK RPL (Sistem Uji Kompetensi Keahlian)</h3>
+              <p class="project-desc">
+                Aplikasi rubrik penilaian pengujian kejuruan standar industri bagi asesor internal dan eksternal, lengkap dengan generator transkrip nilai terverifikasi QR.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-chip">PHP MVC</span>
+                <span class="tech-chip">MySQL Relational</span>
+                <span class="tech-chip">Chart.js</span>
+                <span class="tech-chip">PDF Generator</span>
+                <span class="tech-chip">Vanilla CSS</span>
+              </div>
+
+              <div class="project-footer-actions">
+                <a href="https://github.com/adam-alfatih" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <span>Lihat di GitHub</span>
+                </a>
+
+                <button type="button" class="btn-detail-trigger" data-project="si-ukk-rpl">
+                  Detail Arsitektur ➔
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. TECH STACK & ENGINE ROOM
+         ====================================================================== -->
+    <section class="section" id="stack">
+      <div class="container">
+        <div class="section-head fade-in-section">
+          <span class="mono-tag">04 // ENGINE ROOM</span>
+          <h2 class="section-title">
+            TECH STACK & TELEMETRI <span class="number">[WEAPONS]</span>
+          </h2>
+          <p class="section-subtitle">
+            Teknologi dan perkakas yang digunakan Muhammad Adam Al Fatih dalam merekayasa kode web modern.
+          </p>
+        </div>
+
+        <div class="stack-grid">
+          <!-- Category 1: Frontend Engineering -->
+          <div class="stack-category-card fade-in-section">
+            <div class="stack-card-header">
+              <div class="stack-icon-box">01</div>
+              <h3>Frontend Engine</h3>
+            </div>
+
+            <div class="stack-items-list">
+              <div class="stack-item">
+                <div class="stack-item-meta">
+                  <span class="stack-item-name">HTML5 Semantik & Aksesibilitas</span>
+                  <span class="stack-item-level">95%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 95%;"></div></div>
+              </div>
+
+              <div class="stack-item">
+                <div class="stack-item-meta">
+                  <span class="stack-item-name">CSS3 Murni, Flexbox & Grid</span>
+                  <span class="stack-item-level">92%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 92%;"></div></div>
+              </div>
+
+              <div class="stack-item">
+                <div class="stack-item-meta">
+                  <span class="stack-item-name">JavaScript ES6+ (Async, DOM, API)</span>
+                  <span class="stack-item-level">90%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 90%;"></div></div>
+              </div>
+
+              <div class="stack-item">
+                <div class="stack-item-meta">
+                  <span class="stack-item-name">Responsive Design (Mobile-First)</span>
+                  <span class="stack-item-level">94%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 94%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Backend & Database -->
+          <div class="stack-category-card fade-in-section">
+            <div class="stack-card-header">
+              <div class="stack-icon-box">02</div>
+              <h3>Backend & Database</h3>
+            </div>
+
+            <div class="stack-items-list">
+              <div class="stack-item">
+                <div class="stack-item-meta">
+                  <span class="stack-item-name">PHP (OOP, MVC Architecture)</span>
+                  <span class="stack-item-level">88%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 88%;"></div></div>
+              </div>
+
+              <div class="stack-item">
+                <div class="stack-item-meta">
+                  <span class="stack-item-name">MySQL (Query Optimization, Relasi)</span>
+                  <span class="stack-item-level">86%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 86%;"></div></div>
+              </div>
+
+              <div class="stack-item">
+                <div class="stack-item-meta">
+                  <span class="stack-item-name">Node.js & Express REST API</span>
+                  <span class="stack-item-level">82%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 82%;"></div></div>
+              </div>
+
+              <div class="stack-item">
+                <div class="stack-item-meta">
+                  <span class="stack-item-name">JSON Web Tokens & Keamanan Web</span>
+                  <span class="stack-item-level">80%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 80%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Tools & Workflow -->
+          <div class="stack-category-card fade-in-section">
+            <div class="stack-card-header">
+              <div class="stack-icon-box">03</div>
+              <h3>Tools & Environment</h3>
+            </div>
+
+            <div class="stack-items-list">
+              <div class="stack-item">
+                <div class="stack-item-meta">
+                  <span class="stack-item-name">Git & GitHub Version Control</span>
+                  <span class="stack-item-level">90%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 90%;"></div></div>
+              </div>
+
+              <div class="stack-item">
+                <div class="stack-item-meta">
+                  <span class="stack-item-name">Laragon & Apache Server</span>
+                  <span class="stack-item-level">92%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 92%;"></div></div>
+              </div>
+
+              <div class="stack-item">
+                <div class="stack-item-meta">
+                  <span class="stack-item-name">VS Code & Debugging DevTools</span>
+                  <span class="stack-item-level">95%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 95%;"></div></div>
+              </div>
+
+              <div class="stack-item">
+                <div class="stack-item-meta">
+                  <span class="stack-item-name">Postman API Testing & Figma</span>
+                  <span class="stack-item-level">85%</span>
+                </div>
+                <div class="progress-track"><div class="progress-bar" style="width: 85%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. CONTACT & PIT STOP (COMMUNICATIONS)
+         ====================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head fade-in-section">
+          <span class="mono-tag">05 // PIT STOP</span>
+          <h2 class="section-title">
+            HUBUNGI ADAM <span class="number">[COMM-LINE]</span>
+          </h2>
+          <p class="section-subtitle">
+            Tertarik berkolaborasi dalam proyek web, magang industri, atau eksplorasi teknologi bersama siswa RPL SMK Telkom Lampung? Saluran komunikasi selalu terbuka.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Direct Info -->
+          <div class="contact-info-col fade-in-section">
+            <!-- Address Card -->
+            <div class="contact-card">
+              <div class="contact-card-icon">📍</div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">// ALAMAT & SEKOLAH</span>
+                <p class="contact-card-val">SMK Telkom Lampung, Jl. Raya Gisting, Kabupaten Tanggamus, Provinsi Lampung, Indonesia</p>
+              </div>
+            </div>
+
+            <!-- Email Card -->
+            <div class="contact-card">
+              <div class="contact-card-icon">✉️</div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">// SUREL RESMI</span>
+                <p class="contact-card-val">adam.alfatih.rpl@gmail.com</p>
+                <button type="button" class="btn-copy-email" id="copyEmailBtn">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Salin Alamat Email</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- WhatsApp Card -->
+            <div class="contact-card">
+              <div class="contact-card-icon">📱</div>
+              <div class="contact-card-text">
+                <span class="contact-card-label">// WHATSAPP DIRECT</span>
+                <p class="contact-card-val">+62 812-7890-5524</p>
+              </div>
+            </div>
+
+            <!-- Social Media Network -->
+            <span class="socials-title">// JARINGAN SOSIAL & GITHUB</span>
+            <div class="socials-grid">
+              <a href="https://github.com/adam-alfatih" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                <span>GitHub</span>
+              </a>
+
+              <a href="https://linkedin.com/in/muhammad-adam-alfatih" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                <span>LinkedIn</span>
+              </a>
+
+              <a href="https://instagram.com/adam.alfatih" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                <span>Instagram</span>
+              </a>
+
+              <a href="https://smktelkom-lpg.sch.id" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                <span>SMK Telkom</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-card fade-in-section">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="senderName" class="form-label">Nama Lengkap / Instansi</label>
+                <input type="text" id="senderName" class="form-control" placeholder="Contoh: Budi Santoso / PT Solusi Digital" required>
+              </div>
+
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">Alamat Email Pengirim</label>
+                <input type="email" id="senderEmail" class="form-control" placeholder="nama@perusahaan.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="subjectSelect" class="form-label">Topik Keperluan</label>
+                <select id="subjectSelect" class="form-control" required>
+                  <option value="" disabled selected>Pilih topik diskusi...</option>
+                  <option value="magang">Tawaran Magang Industri / PKL</option>
+                  <option value="proyek">Kolaborasi Pembuatan Web</option>
+                  <option value="sharing">Diskusi RPL & Teknologi</option>
+                  <option value="lainnya">Keperluan Lainnya</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="messageBody" class="form-label">Pesan / Brief Proyek</label>
+                <textarea id="messageBody" class="form-control" placeholder="Tuliskan pesan atau detail kebutuhan sistem..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                <span>Kirim Pesan ke Adam</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       8. FOOTER (F1 PIT WALL SUMMARY & LIVE WIB TIME)
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <span class="footer-brand">MUHAMMAD ADAM AL FATIH // 55</span>
+          <span class="footer-desc">Siswa RPL SMK Telkom Lampung • Senior Web Developer</span>
+        </div>
+
+        <div class="footer-center">
+          <span class="live-clock">
+            <span class="status-dot"></span>
+            <span id="liveClock">--:--:-- WIB</span>
+          </span>
+          <span>LAT 5°27'S 105°16'E (LAMPUNG)</span>
+        </div>
+
+        <div class="footer-right">
+          <a href="#hero" class="btn-top" aria-label="Kembali ke Bagian Atas">
+            <span>Kembali ke Atas</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       9. PROJECT DETAIL MODAL DIALOG
+       ======================================================================== -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Tutup Detail Proyek">&times;</button>
+      
+      <div style="margin-bottom: 1rem;">
+        <span class="mono-tag" id="modalCategory">KATEGORI PROYEK</span>
+        <h3 class="section-title" id="modalTitle" style="font-size: 1.75rem; margin-top: 0.35rem;">Judul Proyek</h3>
+        <span id="modalPeriod" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-red);">Periode</span>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">// DESKRIPSI & LATAR BELAKANG</h4>
+        <p id="modalOverview" style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;"></p>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h4 style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">// FITUR KUNCI & SOLUSI TEKNIS</h4>
+        <ul id="modalFeaturesList" style="padding-left: 1.25rem;"></ul>
+      </div>
+
+      <div style="margin-bottom: 1.75rem;">
+        <h4 style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem;">// TEKNOLOGI YANG DIGUNAKAN</h4>
+        <div id="modalTechStack" style="display: flex; flex-wrap: wrap; gap: 0.4rem;"></div>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; border-top: 1px solid var(--border-light); padding-top: 1.25rem;">
+        <a id="modalGithubLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 0.75rem; padding: 0.6rem 1.2rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          <span>Buka Repositori GitHub</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastNotification" aria-live="polite">
+    <div class="toast">
+      <span id="toastMessage">Pemberitahuan</span>
+    </div>
+  </div>
+
+  <!-- JavaScript Engine -->
+  <script src="script.js"></script>
 </body>
 </html>
-
-<script src="xcsript.js"></script>
