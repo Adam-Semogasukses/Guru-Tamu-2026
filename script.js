@@ -149,11 +149,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // UTC+7 for Lampung / WIB
     const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
     const wibTime = new Date(utc + (3600000 * 7));
-    
+
     const hours = String(wibTime.getHours()).padStart(2, '0');
     const minutes = String(wibTime.getMinutes()).padStart(2, '0');
     const seconds = String(wibTime.getSeconds()).padStart(2, '0');
-    
+
     liveClockElement.textContent = `${hours}:${minutes}:${seconds} WIB`;
   }
   setInterval(updateLiveClock, 1000);
@@ -363,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 12. SMOOTH SCROLL FOR ALL ANCHORS
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       if (targetId && targetId !== '#') {
         const targetElement = document.querySelector(targetId);
